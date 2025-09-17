@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SHASHA Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #chatbox {
+            width: 400px;
+            max-width: 90%;
+            height: 500px;
+            border: 2px solid #004f77;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: scroll;
+            margin: 20px auto;
+            background-color: #f5f5f5;
+        }
+        .message {
+            margin: 10px 0;
+        }
+        .user {
+            text-align: right;
+            color: #004f77;
+        }
+        .bot {
+            text-align: left;
+            color: #000;
+        }
+        #inputArea {
+            width: 400px;
+            max-width: 90%;
+            margin: 0 auto;
+            display: flex;
+        }
+        #inputArea input {
+            flex: 1;
+            padding: 10px;
+        }
+        #inputArea button {
+            padding: 10px;
+            background-color: #004f77;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbox"></div>
+    <div id="inputArea">
+        <input type="text" id="userInput" placeholder="Escribe aquí..." />
+        <button onclick="sendMessage()">Enviar</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
